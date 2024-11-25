@@ -58,6 +58,10 @@ $result = $conn->query($sql);
             <td><?php echo $row['amount']; ?></td>
             <td><?php echo $row['type']; ?></td>
             <td><?php echo $row['date']; ?></td>
+            <td>
+            <a href="update_transaction.php?id=<?php echo $row['id']; ?>">Edit</a>
+            <a href="delete_transaction.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure you want to delete this transaction?');">Delete</a>
+            </td>
         </tr>
         <?php } ?>
     </table>
